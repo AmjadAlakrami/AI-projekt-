@@ -1,1 +1,26 @@
-<annotations><filename>00052.JPEG</filename><folder>images</folder><size><width>500</width><height>420</height><depth>3</depth></size><object><name>openhand</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>111.00000000000003</xmin><ymin>100.99999999999999</ymin><xmax>360.0</xmax><ymax>287.0</ymax></bndbox></object></annotations>
+<annotation>
+    <folder>test im</folder>
+    <filename>00052.JPEG</filename>
+    <path>C:\Users\amjad\OneDrive\Desktop\AI-projekt-\test im\00052.JPEG</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>224</width>
+        <height>224</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>openhand</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>111</xmin>
+            <ymin>105</ymin>
+            <xmax>357</xmax>
+            <ymax>294</ymax>
+        </bndbox>
+    </object>
+</annotation>
