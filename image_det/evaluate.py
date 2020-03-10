@@ -45,7 +45,6 @@ if __name__ == '__main__':
         label_list = config['model']['labels']
         cv2.imshow("imageo", frame)
         cv2.waitKey(1)
-        print(config['model']['labels'])
         #for x in boxes:
             # if config['model']['labels'] == "openhand":
                 # print("hehe")
