@@ -6,8 +6,8 @@ from yolo.backend.utils.box import draw_scaled_boxes
 import spotipy.util as util
 
 DEFAULT_CONFIG_FILE = os.path.join("C:/Users/s8amjala/Desktop/AI-projekt-/image_det", "config.json")
-DEFAULT_WEIGHT_FILE = os.path.join("C:/Users/s8amjala/Desktop/AI-projekt-/image_det", "Model.h5")
-DEFAULT_THRESHOLD = 0.4
+DEFAULT_WEIGHT_FILE = os.path.join("C:/Users/s8amjala/Downloads", "Model.h5")
+DEFAULT_THRESHOLD = 0.2
 
 SPOTIPY_CLIENT_ID='830e5bf515504d4293f128fe0fa77191'
 SPOTIPY_CLIENT_SECRET='abd8c43c229342dbbfff672a04f6d132'
