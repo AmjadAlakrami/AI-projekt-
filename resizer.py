@@ -2,16 +2,16 @@
 import os
 
 from PIL import Image
-for filename in os.listdir("C:/Users/s8amjala/Downloads/thumbs_up_–_Google_Sök"): 
+for filename in os.listdir("C:/Users/amjad/OneDrive/Desktop/New folder (2)"): 
 
 
 
     # open an Image file (.bmp,.jpg,.png,.gif) you have in the working folder
-    imageFile = "C:/Users/s8amjala/Downloads/thumbs_up_–_Google_Sök/"+filename
+    imageFile = "C:/Users/amjad/OneDrive/Desktop/New folder (2)/"+filename
     im1 = Image.open(imageFile)
     # adjust width and height to your needs
-    width = 450
-    height = 450
+    width = 700
+    height = 700
     # use one of these filter options to resize the Image
     # cubic spline interpolation in a 4x4 environment
     im5 = im1.resize((width, height), Image.ANTIALIAS)    # best down-sizing filter

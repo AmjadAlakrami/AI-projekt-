@@ -3,15 +3,12 @@ import os
 def main(): 
     i = 0
     
-    for filename in os.listdir("C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/annotationsXML_2"):
-        # dst ="0000" + str(i) + ".JPEG"
-        x = filename.split(".")
-        y = x[0]
-        z = y+".JPEG"
-        if z not in os.listdir("C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/Images/thumbs_up_–_Google_Sök"):
-        # src ='C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/IMPORTENT/Images/thumbs_up_–_Google_Sök/'+ s 
-        # dst ="C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/Images/thumbs_up_–_Google_Sök/"+ dst 
-            os.remove("C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/annotationsXML_2/"+filename) 
+    for filename in os.listdir("C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/an/Images/w"):
+        dst ="000" + str(i) + ".JPEG"
+        src ='C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/an/Images/w/'+ filename
+        dst ="C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/an/Images/w/"+ dst 
+        os.rename(src, dst)
+        i += 1
 
 main()
 

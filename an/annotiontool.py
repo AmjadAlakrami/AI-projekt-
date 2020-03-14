@@ -15,7 +15,7 @@ SIZE = 256, 256
 classes = []
 
 try:
-    with open('classes.txt','r') as cls:
+    with open('C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/an/classes.txt','r') as cls:
         classes = cls.readlines()
     classes = [cls.strip() for cls in classes]
 except IOError as io:
@@ -138,17 +138,17 @@ class LabelTool():
     def loadDir(self, dbg = False):
         if not dbg:
             try:
-                s = self.entry.get()
+                s = "C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/an/Images/w"
                 self.parent.focus()
                 self.category = s
             except ValueError as ve:
                 tkinter.messagebox.showerror("Error!", message = "The folder should be numbers")
                 return
-        if not os.path.isdir('./Images/%s' % self.category):
+        if not os.path.isdir(self.category):
            tkinter.messagebox.showerror("Error!", message = "The specified dir doesn't exist!")
            return
         # get image list
-        self.imageDir = os.path.join(r'./Images', '%s' %(self.category))
+        self.imageDir = os.path.join(r'%s' %(self.category))
         self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpg'))
         if len(self.imageList) == 0:
             print ('No .jpg images found in the specified dir!')

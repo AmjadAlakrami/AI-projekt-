@@ -2,7 +2,7 @@
 import os
 import xml.etree.cElementTree as ET
 from PIL import Image
-PATH= "Labels/thumbs_up_–_Google_Sök"
+PATH= "an/Images/w"
 ANNOTATIONS_DIR_PREFIX = "./"+PATH
 
 DESTINATION_DIR = "./annotationsXML"
