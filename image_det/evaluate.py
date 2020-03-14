@@ -1,5 +1,4 @@
 import json, cv2, os, spotipy, yolo, time
-import cv2
 import numpy as np
 from yolo.frontend import create_yolo
 from yolo.backend.utils.box import draw_scaled_boxes
@@ -33,15 +32,14 @@ if __name__ == '__main__':
                        config['model']['anchors'])
     yolo.load_weights(DEFAULT_WEIGHT_FILE )
     a = []
-    # for i in range(0, spotifyObject_1.user_playlist_tracks(playlist_id="4QGhaoFzUW8m7qeBur7Kfi")["total"]-1):
-    #     a.append(spotifyObject_1.user_playlist_tracks(playlist_id="4QGhaoFzUW8m7qeBur7Kfi")["items"][i]["track"]["id"])
-    print(spotifyObject_1.user_playlist_tracks(playlist_id="4QGhaoFzUW8m7qeBur7Kfi")["items"][99]["track"])
- 
-    s = 0
+    for i in range(0, spotifyObject_1.user_playlist_tracks(playlist_id="4QGhaoFzUW8m7qeBur7Kfi")["total"]):
+        a.append(spotifyObject_1.user_playlist_tracks(offset=i, limit=1, playlist_id="4QGhaoFzUW8m7qeBur7Kfi")["items"][0]["track"]["id"])
+
     cap = cv2.VideoCapture(0)
     while True:
         _,frame = cap.read()
         boxes, probs = yolo.predict(frame, DEFAULT_THRESHOLD)
+
         labels = np.argmax(probs, axis=1) if len(probs) > 0 else [] 
         # 4. save detection result
         frame = draw_scaled_boxes(frame, boxes, probs, config['model']['labels'])
@@ -51,17 +49,23 @@ if __name__ == '__main__':
 
         if 1 in labels:
             if spotifyObject_1.currently_playing()["item"]["id"] not in a:
+                a.append(spotifyObject_1.currently_playing()["item"]["id"])
                 spotifyObject_1.user_playlist_add_tracks(user=USERNAME ,playlist_id="4QGhaoFzUW8m7qeBur7Kfi",tracks=[spotifyObject_1.currently_playing()["item"]["id"]])
-        
-       
-        #for x in boxes:
-            # if config['model']['labels'] == "openhand":
-                # print("hehe")
-                # if x[0] > 250:
-                #     time.sleep(3)
-                #     spotifyObject.previous_track()
-                # elif x[0] < 50:
-                #     time.sleep(3)
-                #     spotifyObject.next_track()
+            else:
+                print("track is in list")
+        if 0 in labels:
+            for x in boxes:
+                print(x)
+                if x[0] > 150 :
+                    print("1")
+                    if x[0]-260 >= 100:
+                        print("2")
+                        spotifyObject_1.next_track()
+                if x[0] < 90 :
+                    print(3)
+                    if x[0]-260 < -300:
+                        print(4)
+                        spotifyObject_1.previous_track()
+
     cv2.destroyAllWindows()
             
