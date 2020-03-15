@@ -5,7 +5,8 @@ from yolo.backend.utils.box import draw_scaled_boxes
 import spotipy.util as util
 
 DEFAULT_CONFIG_FILE = os.path.join("C:/Users/amjad/OneDrive/Documents/GitHub/AI-projekt-/image_det", "config.json")
-DEFAULT_WEIGHT_FILE = os.path.join("C:/Users/amjad/Downloads", "model.h5")
+DEFAULT_WEIGHT_FILE = os.path.join("C:/Users/amjad/Downloads", "2020-03-15_10-16-40.h5")
+DEFAULT_WEIGHT_FILE_2 = os.path.join("C:/Users/amjad/Downloads", "model.h5")
 DEFAULT_THRESHOLD = 0.5
 
 SPOTIPY_CLIENT_ID='830e5bf515504d4293f128fe0fa77191'
@@ -30,7 +31,7 @@ if __name__ == '__main__':
                        config['model']['labels'],
                        config['model']['input_size'],
                        config['model']['anchors'])
-    yolo.load_weights(DEFAULT_WEIGHT_FILE )
+    yolo.load_weights(DEFAULT_WEIGHT_FILE, DEFAULT_WEIGHT_FILE_2 )
     a = []
     # for i in range(0, spotifyObject_1.user_playlist_tracks(playlist_id="4QGhaoFzUW8m7qeBur7Kfi")["total"]):
     #     a.append(spotifyObject_1.user_playlist_tracks(offset=i, limit=1, playlist_id="4QGhaoFzUW8m7qeBur7Kfi")["items"][0]["track"]["id"])

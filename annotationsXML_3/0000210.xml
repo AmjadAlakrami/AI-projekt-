@@ -1,0 +1,1 @@
+<annotations><filename>0000210.jpg</filename><folder>images</folder><size><width>300</width><height>168</height><depth>3</depth></size><object><name>openhand</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>31.999999999999986</xmin><ymin>4.0</ymin><xmax>186.0</xmax><ymax>160.0</ymax></bndbox></object></annotations>

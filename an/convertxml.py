@@ -5,17 +5,18 @@ from PIL import Image
 PATH= "an/Images/w"
 ANNOTATIONS_DIR_PREFIX = "./"+PATH
 
-DESTINATION_DIR = "./annotationsXML"
+DESTINATION_DIR = "./an/annotationsXML_3"
 
 CLASS_MAPPING = {
-    '0': 'thumbsup'
+    '0': 'thumbsup',
+    '1': 'openhand'
     # Add your remaining classes here.
 }
 
 
 def create_root(file_prefix, width, height):
     root = ET.Element("annotations")
-    ET.SubElement(root, "filename").text = "{}.JPEG".format(file_prefix)
+    ET.SubElement(root, "filename").text = "{}.jpg".format(file_prefix)
     ET.SubElement(root, "folder").text = "images"
     size = ET.SubElement(root, "size")
     ET.SubElement(size, "width").text = str(width)
@@ -50,7 +51,7 @@ def create_file(file_prefix, width, height, voc_labels):
 
 def read_file(file_path):
     file_prefix = file_path.split(".txt")[0]
-    image_file_name = "{}.JPEG".format(file_prefix)
+    image_file_name = "{}.jpg".format(file_prefix)
     img = Image.open("{}/{}".format(PATH, image_file_name))
 
     print(img)

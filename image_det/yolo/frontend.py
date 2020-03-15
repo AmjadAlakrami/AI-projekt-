@@ -69,6 +69,7 @@ class YOLO(object):
         if os.path.exists(weight_path):
             print("Loading pre-trained weights in", weight_path)
             self._yolo_network.load_weights(weight_path, by_name=by_name)
+            print(weight_path)
         else:
             print("Fail to load pre-trained weights. Make sure weight file path.")
 

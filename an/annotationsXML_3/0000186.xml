@@ -1,0 +1,1 @@
+<annotations><filename>0000186.jpg</filename><folder>images</folder><size><width>309</width><height>340</height><depth>3</depth></size><object><name>thumbsup</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>1.9999999999999858</xmin><ymin>3.0</ymin><xmax>254.0</xmax><ymax>338.0</ymax></bndbox></object></annotations>
