@@ -1,1 +1,0 @@
-<annotations><filename>00035.JPEG</filename><folder>images</folder><size><width>910</width><height>724</height><depth>3</depth></size><object><name>thumbsup</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>279.5</xmin><ymin>28.960000000000008</ymin><xmax>605.8</xmax><ymax>436.4685714285714</ymax></bndbox></object></annotations>
