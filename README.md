@@ -1,1 +1,2 @@
 # AI-projekt-
+## Syftet
