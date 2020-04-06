@@ -22,7 +22,7 @@
         "class_scale": 1.0,
         "object_scale": 5.0,
         "no_object_scale": 1.0,
-        "DEFAULT_THRESHOLD": 0.65
+        "DEFAULT_THRESHOLD": 0.8
     },
     "spotify_config": {
         "Done": true,
@@ -48,12 +48,26 @@
             "1cTZMwcBJT0Ka3UJPXOeeN",
             "3kfxarilcBr81mb2hmZLeh",
             "2cYqizR4lgvp4Qu6IQ3qGN",
-            "7uJH0YdSZL6psjxI6Xy08b"
+            "7uJH0YdSZL6psjxI6Xy08b",
+            "6PmBnKrQuT4guboE9mNQIe",
+            "76Y0gxtTxN0FyDCYh5qYQj",
+            "0B8PEh4bZ98kvJMZbNbGAK",
+            "0W2YQYzdW7EDKt17DfR8TV",
+            "5uVRkwOe3DGXxeLhEXhonQ",
+            "3MXDEDLmQPSQvoyJIYbIp3",
+            "5ovKXoPXsaCydETxiqbt80",
+            "5u64RlrnvvbtNh6R0EMh6o",
+            "1QvPkpRLq07ps7S9izzQtK",
+            "1wZqJM5FGDEl3FjHDxDyQd",
+            "05nbZ1xxVNwUTcGwLbp7CN",
+            "78QR3Wp35dqAhFEc2qAGjE"
         ],
+        "s": [],
+        "u": "playing previous track",
         "SPOTIPY_CLIENT_ID": "830e5bf515504d4293f128fe0fa77191",
         "SPOTIPY_CLIENT_SECRET": "abd8c43c229342dbbfff672a04f6d132",
         "SPOTIPY_REDIRECT_URI": "https://www.google.com/",
         "USERNAME": "wj4xvcjslfruo3tv9wl1nq0rw",
-        "SCOPE": "user-modify-playback-state user-read-currently-playing playlist-modify-private playlist-modify-public playlist-read-private"
+        "SCOPE": "user-modify-playback-state user-read-currently-playing playlist-modify-private playlist-modify-public playlist-read-private user-read-playback-state"
     }
 }
