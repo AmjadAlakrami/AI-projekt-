@@ -23,10 +23,9 @@ yolo.load_weights(DEFAULT_WEIGHT_FILE)
 def Connect_to_token(): #ansluter till spotify token 
     global w
     if not config["spotify_config"]["Done"]: #om token inte är skapad förut 
-        config["spotify_config"]["SPOTIPY_CLIENT_ID"] = input("Inter your spotipy client id: ")
-        config["spotify_config"]["SPOTIPY_CLIENT_SECRET"] = input("Inter your spotipy client secret: ")
-        config["spotify_config"]["SPOTIPY_REDIRECT_URI"] = input("Inter your spotipy redirect uri: ")
-        config["spotify_config"]["USERNAME"] = input("Inter your spotify username: ")
+        config["spotify_config"]["SPOTIPY_CLIENT_ID"] = input("Enter your spotipy client id: ")
+        config["spotify_config"]["SPOTIPY_CLIENT_SECRET"] = input("Enter your spotipy client secret: ")
+        config["spotify_config"]["USERNAME"] = input("Enter your spotify username: ")
         config["spotify_config"]["Done"] = True
         new_json_string = json.dumps(config, indent=4, )
         config_buffer = open(DEFAULT_CONFIG_FILE,'w+') 
