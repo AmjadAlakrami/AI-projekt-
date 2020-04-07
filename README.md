@@ -8,6 +8,7 @@ Efter det så började jag med att skapa annotation till alla bilder jag hade. S
 Efter det så är [datasetet](https://github.com/AmjadAlakrami/AI-dataset/tree/master/Dataset) färdig och då kan man börja med träningen i [google colab](https://colab.research.google.com/drive/1PtKLwonDkTzI1cz0AFbjkxgROJ2IIjff#scrollTo=px4fIT-E1gUO). 
 
 ### Spotify API
+#### (OBS!! det här steget måste man göra för att test köra mitt program.)
+För att kunna använda spotify API så måste man skapa en app på [Spotify Developer](https://developer.spotify.com/dashboard/login). När man ska logga in så använder man samma inloggning som man på spotify kontot. Sedan så trycker man på "Creat an app" och då få man nämna appen precis som man vill och skriva en kort beskrivning om det (ett streck räknas som en kort beskrivning). Efter det så bockar man av "Desktop App" och trycker på next. Sedan tycker man på NON-COMMERCIAL. Efter det så bockar man av alla tre rutor och trycker på submit. 
 ![]()
 
-Programmet kan kännigen öppnahänder och tummenup  
