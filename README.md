@@ -9,8 +9,8 @@ Efter det så är [datasetet](https://github.com/AmjadAlakrami/AI-dataset/tree/m
 
 ### Spotify API
 #### (OBS!! det här steget måste man göra för att test köra mitt program.)
-För att kunna använda spotify API så måste man skapa en app på [Spotify Developer](https://developer.spotify.com/dashboard/login). När man ska logga in så använder man samma inloggning som man på spotify kontot. Sedan så trycker man på "Creat an app" och då få man nämna appen precis som man vill och skriva en kort beskrivning om det (ett streck räknas som en kort beskrivning). Efter det så bockar man av "Desktop App" och trycker på next. Sedan tycker man på NON-COMMERCIAL. Efter det så bockar man av alla tre rutor och trycker på submit. Efter det så borde en liknande sida komma upp: 
+För att kunna använda spotify API så måste man skapa en app på [Spotify Developer](https://developer.spotify.com/dashboard/login). När man ska logga in så använder man samma inloggning som man har på spotify kontot. Sedan så trycker man på "Creat an app" och då få man nämna appen precis som man vill och skriva en kort beskrivning om det (ett streck räknas som en kort beskrivning). Efter det så bockar man av "Desktop App" och trycker på next. Sedan tycker man på NON-COMMERCIAL. Efter det så bockar man av alla tre rutor och trycker på submit. Efter det så borde en liknande sida komma upp: 
 
 ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(22).png)
 
-Då trycker man på "Edit setting" längs upp till höger. 
+Då trycker man på "Edit setting" längs upp till höger, och då lägger man till "https://www.google.com/" i "Redirect URIs" rutan och trycker sedan på save. Därefter så behöver du kopiera din Client ID och Client Secret som finns under appen namn på vänset sidan (tryck på Show clien secret för att få fram den) och spara de någonstans där du lätt kan komma åt de. Sedan så behöver du ha din spotify användarnamn, och det kan du komma år genom att logga in på din spotify konto på google, sedan så tycker du på profil/konto, och då borde du kunna hitta den längst upp under Kontoöversikt/profil. 
