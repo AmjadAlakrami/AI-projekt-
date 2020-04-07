@@ -8,6 +8,6 @@ Efter det så började jag med att skapa annotation till alla bilder jag hade. S
 Efter det så är [datasetet](https://github.com/AmjadAlakrami/AI-dataset/tree/master/Dataset) färdig och då kan man börja med träningen i [google colab](https://colab.research.google.com/drive/1PtKLwonDkTzI1cz0AFbjkxgROJ2IIjff#scrollTo=px4fIT-E1gUO). 
 
 ### Spotify API
-![s](Video&Images/SpotifyaApi.mp4)
+<video src="SpotifyaApi.mp4" width="320" height="200" controls preload></video>
 
 Programmet kan kännigen öppnahänder och tummenup  
