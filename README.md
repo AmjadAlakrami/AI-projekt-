@@ -40,7 +40,18 @@ En viktig sak och ha i bakhuvudet är att spotify tok upphöra efter en timme, o
     if os.path.isfile(".cache-"+ config["spotify_config"]["USERNAME"]):
         os.remove(".cache-"+ config["spotify_config"]["USERNAME"])
 ```
+Jag försökte använda "try except" men det gick inte, och jag tror att det beror på att det är ett api error som kommer upp när token upphör. 
 
-#### Alla funktioner i programmet
+#### Beskrivning av alla funktioner i programmet
+##### Connect_to_token():
+Det är där jag skapar spotify token och ansluter till den, men jag har även en en if-sats som kollar om programmet har blivit använd på den här dator förut, om inte så ber den användaren användaren att mata in username, client_id och client_secret för att skapa en token åt användaren.  
+  
+##### creat_list():
+Det som den funktionen gör är att skapa en spellista åt användaren, där programmet kommer lägga låtar till den listan.  
+  
+##### Add_to_list():
+Den funktionen körs när programmet dikterar en tumme upp. En tumme upp indikerar att användaren tyckte om låten som spelas, då kommer den här funktionen att lägga till låten till spellistan som skapades av funktionen ovan. 
+
+
 
 
