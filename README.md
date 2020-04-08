@@ -19,6 +19,7 @@ Då trycker man på "Edit setting" längs upp till höger, och då lägger man t
 
 ### evaluate.py
 #### Vilka Bibliotek behöver man ladda ner:
+#### (OBS!! det här steget måste man göra för att test köra mitt program.)
 cv2: pip install opencv-python  
 spotipy: pip install spotipy  
 numpy: pip install numpy  
@@ -56,6 +57,9 @@ Den här funktionen körs när programmet detekterar en tumme upp. En tumme upp 
 Den här funktinen körs när programmet detekterar en vinkande hand. Sedan beroende på handens postion så kommer funktionen att utföra olika saker. Om hand rör sig högeråt så kommer funktionen att spela nästa låt, om handen rör sig vänsteråt så kommer funktione att spela föregånde låt, och om hand står still så kommer funktionen beronde på låtens status att spela eller pausa den. 
 
 ### config.json:
-I config.json så har jag olika variabler som jag vill spara långsiktig, alltså på hårdisken och inte i ram minnet, och det är för att göra programmet mer effektiv. Jag har även olika konfigurationer för min model. 
+I config.json så har jag olika variabler som jag vill spara långsiktig, alltså i hårdisken och inte i ram minnet, och det är för att göra programmet mer effektiv. Jag har även olika konfigurationer för min model.   
+  
+## Hur test kör man programmet: 
+Först så behöver spotify appen nedladd på dator. Sedan så ska du gå igenom "Spotify API" och "Vilka Bibliotek behöver man ladda ner" sedan ladda ner image_det folder och öppna hela foldern i Visual studio eller ett liknande code editor, och sedan kör du evaluate koden. När du kör programmet så kommer du behöva fylla i de informationen som programmet ber dig att fylla i, detta steget kommer du behöva göra det bara första gången du kör programmet. Efter det så kommer en spotify sida att komma upp, då trycker du på agree []() sedna kommer en goole sida att dyka upp då kopierar du l länken till den sidan och klistra in det i terminalen. Och då är du redo att testa. 
 
 
