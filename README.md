@@ -18,12 +18,12 @@ Då trycker man på "Edit setting" längs upp till höger, och då lägger man t
 ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(22)_LI.jpg) ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(24)_LI.jpg)![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(25)_LI.jpg)![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(27)_LI.jpg)
 
 ### evaluate.py
-#### Vilka Bibliotek behöver man ladda ner
+#### Vilka Bibliotek behöver man ladda ner:
 cv2: pip install opencv-python  
 spotipy: pip install spotipy  
 numpy: pip install numpy  
 
-#### Hur använder man Spotipy
+#### Hur använder man Spotipy:
 Först så behöver man importera Biblioteket  
 ```python  
 import spotipy  
@@ -42,7 +42,7 @@ En viktig sak och ha i bakhuvudet är att spotify tok upphöra efter en timme, o
 ```
 Jag försökte använda "try except" men det gick inte, och jag tror att det beror på att det är ett api error som kommer upp när token upphör. 
 
-#### Beskrivning av alla funktioner i programmet
+#### Beskrivning av alla funktioner i programmet:
 ##### Connect_to_token():
 Det är där jag skapar spotify token och ansluter till den, men jag har även en en if-sats som kollar om programmet har blivit använd på den här dator förut, om inte så ber den användaren användaren att mata in username, client_id och client_secret för att skapa en token åt användaren.  
   
@@ -55,5 +55,7 @@ Den här funktionen körs när programmet detekterar en tumme upp. En tumme upp 
 ##### Change_song_puse_play():
 Den här funktinen körs när programmet detekterar en vinkande hand. Sedan beroende på handens postion så kommer funktionen att utföra olika saker. Om hand rör sig högeråt så kommer funktionen att spela nästa låt, om handen rör sig vänsteråt så kommer funktione att spela föregånde låt, och om hand står still så kommer funktionen beronde på låtens status att spela eller pausa den. 
 
+### config.json:
+I config.json så har jag olika variabler som jag vill spara långsiktig, alltså på hårdisken och inte i ram minnet, och det är för att göra programmet mer effektiv. Jag har även olika konfigurationer för min model. 
 
 
