@@ -14,3 +14,5 @@ För att kunna använda spotify API så måste man skapa en app på [Spotify Dev
 ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(22).png)
 
 Då trycker man på "Edit setting" längs upp till höger, och då lägger man till "https://www.google.com/" i "Redirect URIs" rutan och trycker sedan på save. Därefter så behöver du kopiera din Client ID och Client Secret som finns under appen namn på vänset sidan (tryck på Show clien secret för att få fram den) och spara de någonstans där du lätt kan komma åt de. Sedan så behöver du ha din spotify användarnamn, och det kan du komma år genom att logga in på din spotify konto på google, sedan så tycker du på profil/konto, och då borde du kunna hitta den längst upp under Kontoöversikt/profil. 
+
+![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(22)_LI.jpg) ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(24)_LI.jpg)
