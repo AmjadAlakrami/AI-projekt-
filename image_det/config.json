@@ -62,12 +62,10 @@
             "05nbZ1xxVNwUTcGwLbp7CN",
             "78QR3Wp35dqAhFEc2qAGjE"
         ],
-        "s": [],
-        "u": "playing previous track",
         "SPOTIPY_CLIENT_ID": "830e5bf515504d4293f128fe0fa77191",
         "SPOTIPY_CLIENT_SECRET": "abd8c43c229342dbbfff672a04f6d132",
         "SPOTIPY_REDIRECT_URI": "https://www.google.com/",
         "USERNAME": "wj4xvcjslfruo3tv9wl1nq0rw",
-        "SCOPE": "user-modify-playback-state user-read-currently-playing playlist-modify-private playlist-modify-public playlist-read-private user-read-playback-state"
+        "SCOPE": "user-modify-playback-state user-read-currently-playing playlist-modify-private playlist-modify-public playlist-read-private user-read-playback-state ugc-image-upload"
     }
 }
