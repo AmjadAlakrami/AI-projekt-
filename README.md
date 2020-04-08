@@ -36,7 +36,7 @@ token_1= util.prompt_for_user_token(username=, scope=, client_id=, redirect_uri=
 spotifyObject_1 = spotipy.Spotify(auth=token_1)
 ``` 
 prompt_for_user_token funktionen tar 8 arugment, men det man behöver anväda är de 5 som står i koden ovan. usernam, client_id och client_secret är de information som du borde ha spart sedan innan, redirect_uri är då "https://www.google.com/". scope argument är lite mer specill, då det finns en mängd olika scope man kan ha beroende på vilken funktion man vill köra från spotipy biblioteket, och då kan man läsa deras [dokumentation](https://developer.spotify.com/documentation/web-api/reference/). Men de scopes man behöver för detta projekt är  "user-modify-playback-state user-read-currently-playing playlist-modify-private playlist-modify-public playlist-read-private user-read-playback-state". Och för att använda flera scope så ska man har de i samma string men man ska separera de med mellanslag.   
-En viktig sak och ha i bakhuvudet är att spotify tok upphöra efter en timme, och då kommer programmet att kracha varje gång man kör den, det jag gjorde för att lösa det problemet är att jag tar bort den gammla token och skapar en ny varje gång programmet körs. 
+En viktig sak och ha i bakhuvudet är att spotify token upphöra efter en timme, och då kommer programmet att kracha varje gång man kör den, det jag gör för att undvika det här problemet är att jag tar bort den gammla token och skapar en ny varje gång programmet körs. 
 ```python
     if os.path.isfile(".cache-"+ config["spotify_config"]["USERNAME"]):
         os.remove(".cache-"+ config["spotify_config"]["USERNAME"])
