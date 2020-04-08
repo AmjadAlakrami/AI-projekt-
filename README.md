@@ -17,12 +17,13 @@ Då trycker man på "Edit setting" längs upp till höger, och då lägger man t
 
 ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(22)_LI.jpg) ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(24)_LI.jpg)![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(25)_LI.jpg)![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(27)_LI.jpg)
 
-### Vilka Bibliotek behöver man ladda ner
+### evaluate.py
+#### Vilka Bibliotek behöver man ladda ner
 cv2: pip install opencv-python  
 spotipy: pip install spotipy  
 numpy: pip install numpy  
 
-### Hur använder man Spotipy
+#### Hur använder man Spotipy
 Först så behöver man importera Biblioteket  
 ```python  
 import spotipy  
@@ -39,5 +40,7 @@ En viktig sak och ha i bakhuvudet är att spotify tok upphöra efter en timme, o
     if os.path.isfile(".cache-"+ config["spotify_config"]["USERNAME"]):
         os.remove(".cache-"+ config["spotify_config"]["USERNAME"])
 ```
+
+#### Alla funktioner i programmet
 
 
