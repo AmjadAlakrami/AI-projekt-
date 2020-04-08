@@ -6,12 +6,13 @@ import spotipy.util as util
 
 DEFAULT_CONFIG_FILE = "./image_det/config.json"
 DEFAULT_WEIGHT_FILE = "./image_det/model.h5"
-
 config_buffer = open(DEFAULT_CONFIG_FILE,'r') 
 config = json.loads(config_buffer.read())
 
 a = []
 s = []
+e = []
+
 w = 0
 spotifyObject_1= None
 # 2. create yolo instance & predict
@@ -20,14 +21,20 @@ yolo = create_yolo(config['model']['architecture'],
                     config['model']['input_size'],
                     config['model']['anchors'])
 yolo.load_weights(DEFAULT_WEIGHT_FILE)
-
+hostname = socket.gethostname() 
 def Connect_to_token(): #ansluter till spotify token 
-    global spotifyObject_1
-    if not config["spotify_config"]["Done"]: #om token inte är skapad förut 
-        config["spotify_config"]["SPOTIPY_CLIENT_ID"] = input("Enter your spotipy client id: ")
-        config["spotify_config"]["SPOTIPY_CLIENT_SECRET"] = input("Enter your spotipy client secret: ")
+    global spotifyObject_1, e
+    for i in range(0, len(config["spotify_config"]["Devices"])): 
+        e.append(config["spotify_config"]["Devices"][i]["devuce-name"])
+    if hostname in e:
+         config["spotify_config"]["USERNAME"] = config["spotify_config"]["Devices"][e.index(hostname)]["USERNAME"]
+    else:
         config["spotify_config"]["USERNAME"] = input("Enter your spotify username: ")
-        config["spotify_config"]["Done"] = True
+        config["spotify_config"]["Devices"].append(      
+             {
+            "devuce-name": hostname,
+            "USERNAME": config["spotify_config"]["USERNAME"]
+            })
         new_json_string = json.dumps(config, indent=4, )
         config_buffer = open(DEFAULT_CONFIG_FILE,'w+') 
         config_buffer.write(new_json_string)
@@ -103,10 +110,9 @@ while True:
         except:
             input(" No active device found ... press ENTER when you are back on track")
     if 1 in labels: #om en hand hittas
-        try:
+        
             Change_song_puse_play()
-        except:
-            input(" No active device found ... press ENTER when you are back on track")
+
 
 
 cv2.destroyAllWindows()

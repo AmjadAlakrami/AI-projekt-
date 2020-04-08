@@ -26,8 +26,13 @@
     },
     "spotify_config": {
         "Done": true,
-        "Devices": ["192.168.10.135"],
-        "list_created": "5wZl2QUoAEym5xDYrg5OUY",
+        "Devices": [
+            {
+                "devuce-name": "DESKTOP-3SP54Q4",
+                "USERNAME": "wj4xvcjslfruo3tv9wl1nq0rw"
+            }
+        ],
+        "list_created": "669IbAjvGFm9EkUqdOMq68",
         "track_in_list": [
             "1ett0ayp7e0sad3oWQtJPQ",
             "2EgB4n6XyBsuNUbuarr4eG",
@@ -61,12 +66,13 @@
             "1QvPkpRLq07ps7S9izzQtK",
             "1wZqJM5FGDEl3FjHDxDyQd",
             "05nbZ1xxVNwUTcGwLbp7CN",
-            "78QR3Wp35dqAhFEc2qAGjE"
+            "78QR3Wp35dqAhFEc2qAGjE",
+            "1QrRpvbMLcLn5uOMbufSy8"
         ],
         "SPOTIPY_CLIENT_ID": "830e5bf515504d4293f128fe0fa77191",
         "SPOTIPY_CLIENT_SECRET": "abd8c43c229342dbbfff672a04f6d132",
         "SPOTIPY_REDIRECT_URI": "https://www.google.com/",
-        "USERNAME": "21qvrfzjcel6aztlqmtkdpvfy",
+        "USERNAME": "wj4xvcjslfruo3tv9wl1nq0rw",
         "SCOPE": "user-modify-playback-state user-read-currently-playing playlist-modify-private playlist-modify-public playlist-read-private user-read-playback-state ugc-image-upload"
     }
 }
