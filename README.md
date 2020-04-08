@@ -45,7 +45,7 @@ Jag försökte använda "try except" men det gick inte, och jag tror att det ber
 
 #### Beskrivning av alla funktioner i programmet:
 ##### Connect_to_token():
-Det är där jag skapar spotify token och ansluter till den, men jag har även en en if-sats som kollar om programmet har blivit använd på den här dator förut, om inte så ber den användaren användaren att mata in username, client_id och client_secret för att skapa en token åt användaren.  
+Det är där jag skapar spotify token och ansluter till den, men jag har även en en if-sats som kollar om programmet har blivit använd på användarens dator förut, om inte så ber den användaren användaren att mata in username, client_id och client_secret för att skapa en token åt användaren.  
   
 ##### creat_list():
 Det som den funktionen gör är att skapa en spellista åt användaren, där programmet kommer lägga låtar till den listan.  
