@@ -50,8 +50,10 @@ Det är där jag skapar spotify token och ansluter till den, men jag har även e
 Det som den funktionen gör är att skapa en spellista åt användaren, där programmet kommer lägga låtar till den listan.  
   
 ##### Add_to_list():
-Den funktionen körs när programmet dikterar en tumme upp. En tumme upp indikerar att användaren tyckte om låten som spelas, då kommer den här funktionen att lägga till låten till spellistan som skapades av funktionen ovan. 
-
+Den här funktionen körs när programmet detekterar en tumme upp. En tumme upp indikerar att användaren tyckte om låten som spelas, då kommer den här funktionen att lägga till låten till spellistan som skapades av funktionen ovan.  
+  
+##### Change_song_puse_play():
+Den här funktinen körs när programmet detekterar en vinkande hand. Sedan beroende på handens postion så kommer funktionen att utföra olika saker. Om hand rör sig högeråt så kommer funktionen att spela nästa låt, om handen rör sig vänsteråt så kommer funktione att spela föregånde låt, och om hand står still så kommer funktionen beronde på låtens status att spela eller pausa den. 
 
 
 
