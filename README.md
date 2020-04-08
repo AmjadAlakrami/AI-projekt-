@@ -13,7 +13,7 @@ För att kunna använda spotify API så måste man skapa en app på [Spotify Dev
 
 ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(22).png)
 
-Då trycker man på "Edit setting" längs upp till höger, och då lägger man till "https://www.google.com/" i "Redirect URIs" rutan och trycker sedan på save. Därefter så behöver du kopiera din Client ID och Client Secret som finns under appen namn på vänset sidan (tryck på Show clien secret för att få fram den) och spara de någonstans där du lätt kan komma åt de. Sedan så behöver du ha din spotify användarnamn, och det kan du komma år genom att logga in på din spotify konto på google, sedan så tycker du på profil/konto, och då borde du kunna hitta den längst upp under Kontoöversikt/profil, kopiera den och spara den med tillsammans med din Client ID och Client Secret.
+Då trycker man på "Edit setting" längs upp till höger, och då lägger man till "https://www.google.com/" i "Redirect URIs" rutan och trycker sedan på save. Därefter så behöver du kopiera din Client ID och Client Secret som finns under appen namn på vänset sidan (tryck på Show clien secret för att få fram den) och spara de någonstans där du lätt kan komma åt de. Sedan så behöver du ha din spotify användarnamn, och det kan du komma år genom att logga in på din spotify konto på google, sedan så tycker du på profil/konto, och då borde du kunna hitta den längst upp under Kontoöversikt/profil, kopiera den och spara den med tillsammans med din Client ID och Client Secret. (bilderna nedan förtydligar var alla knappar finns ifall något var otydlig i beskrivningen) 
 
 ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(22)_LI.jpg) ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(24)_LI.jpg)![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(25)_LI.jpg)![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(27)_LI.jpg)
 
@@ -23,4 +23,15 @@ spotipy: pip install spotipy
 numpy: pip install numpy  
 
 ### Hur använder man Spotipy
+Först så behöver man importera Biblioteket  
+  
+import spotipy  
+import spotipy.util as util  (Det här gör man för enkelhetens skull och man kan strunta i det om man vill)  
+  
+Sedan måste man skapa ett token och ansluta till den.  
+  
+token_1= util.prompt_for_user_token(username=, ,client_id=, redirect_uri=, client_secret=)
+spotifyObject_1 = spotipy.Spotify(auth=token_1)
+
+
 
