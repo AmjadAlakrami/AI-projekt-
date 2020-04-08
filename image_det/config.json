@@ -25,54 +25,15 @@
         "DEFAULT_THRESHOLD": 0.8
     },
     "spotify_config": {
-        "Done": true,
         "Devices": [
-            {
-                "devuce-name": "DESKTOP-3SP54Q4",
-                "USERNAME": "wj4xvcjslfruo3tv9wl1nq0rw"
-            }
         ],
-        "list_created": "669IbAjvGFm9EkUqdOMq68",
+        "list_created": "",
         "track_in_list": [
-            "1ett0ayp7e0sad3oWQtJPQ",
-            "2EgB4n6XyBsuNUbuarr4eG",
-            "15k2nBQJ0teDmPZHrOXL2N",
-            "3YHHiktpaEShl6v22bOpzo",
-            "6S5dMjMifQYmyTu1mX4f8P",
-            "79s5XnCN4TJKTVMSmOx8Ep",
-            "2SL6oP2YAEQbqsrkOzRGO4",
-            "7DcvwMAiqKJQD1rrdfxSDx",
-            "5u6vkDnOyaf8LsteDAj2ub",
-            "2jTujnt0y344ai1rNOywgr",
-            "7DKS0rX27cCEPsK0R6tFWS",
-            "7iatul8O8RVR8rDGEgbpIp",
-            "2Ch7LmS7r2Gy2kc64wv3Bz",
-            "0oufSLnKQDoBFX5mgkDCgR",
-            "6lJ5aSxKHCwNBoWkZT3JeJ",
-            "4SWWe2OYC4mqf40Gc2RSdl",
-            "4g32MdRoqwGKQd3NXIRhpU",
-            "1cTZMwcBJT0Ka3UJPXOeeN",
-            "3kfxarilcBr81mb2hmZLeh",
-            "2cYqizR4lgvp4Qu6IQ3qGN",
-            "7uJH0YdSZL6psjxI6Xy08b",
-            "6PmBnKrQuT4guboE9mNQIe",
-            "76Y0gxtTxN0FyDCYh5qYQj",
-            "0B8PEh4bZ98kvJMZbNbGAK",
-            "0W2YQYzdW7EDKt17DfR8TV",
-            "5uVRkwOe3DGXxeLhEXhonQ",
-            "3MXDEDLmQPSQvoyJIYbIp3",
-            "5ovKXoPXsaCydETxiqbt80",
-            "5u64RlrnvvbtNh6R0EMh6o",
-            "1QvPkpRLq07ps7S9izzQtK",
-            "1wZqJM5FGDEl3FjHDxDyQd",
-            "05nbZ1xxVNwUTcGwLbp7CN",
-            "78QR3Wp35dqAhFEc2qAGjE",
-            "1QrRpvbMLcLn5uOMbufSy8"
         ],
         "SPOTIPY_CLIENT_ID": "830e5bf515504d4293f128fe0fa77191",
         "SPOTIPY_CLIENT_SECRET": "abd8c43c229342dbbfff672a04f6d132",
         "SPOTIPY_REDIRECT_URI": "https://www.google.com/",
-        "USERNAME": "wj4xvcjslfruo3tv9wl1nq0rw",
+        "USERNAME": "",
         "SCOPE": "user-modify-playback-state user-read-currently-playing playlist-modify-private playlist-modify-public playlist-read-private user-read-playback-state ugc-image-upload"
     }
 }

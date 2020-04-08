@@ -9,12 +9,10 @@ DEFAULT_WEIGHT_FILE = "./image_det/model.h5"
 config_buffer = open(DEFAULT_CONFIG_FILE,'r') 
 config = json.loads(config_buffer.read())
 
-a = []
-s = []
-e = []
+playlist = []
+postion = []
+host_name_list = []
 
-w = 0
-spotifyObject_1= None
 # 2. create yolo instance & predict
 yolo = create_yolo(config['model']['architecture'],
                     config['model']['labels'],
@@ -22,12 +20,16 @@ yolo = create_yolo(config['model']['architecture'],
                     config['model']['anchors'])
 yolo.load_weights(DEFAULT_WEIGHT_FILE)
 hostname = socket.gethostname() 
+
 def Connect_to_token(): #ansluter till spotify token 
-    global spotifyObject_1, e
+    global spotifyObject_1, host_name_list
+    #kollar om programmet har använts på användarens dator förut 
     for i in range(0, len(config["spotify_config"]["Devices"])): 
-        e.append(config["spotify_config"]["Devices"][i]["devuce-name"])
-    if hostname in e:
-         config["spotify_config"]["USERNAME"] = config["spotify_config"]["Devices"][e.index(hostname)]["USERNAME"]
+        host_name_list.append(config["spotify_config"]["Devices"][i]["devuce-name"])
+
+    if hostname in host_name_list:
+         config["spotify_config"]["USERNAME"] = config["spotify_config"]["Devices"][host_name_list.index(hostname)]["USERNAME"]
+
     else:
         config["spotify_config"]["USERNAME"] = input("Enter your spotify username: ")
         config["spotify_config"]["Devices"].append(      
@@ -38,6 +40,7 @@ def Connect_to_token(): #ansluter till spotify token
         new_json_string = json.dumps(config, indent=4, )
         config_buffer = open(DEFAULT_CONFIG_FILE,'w+') 
         config_buffer.write(new_json_string)
+
     if os.path.isfile(".cache-"+ config["spotify_config"]["USERNAME"]):#förnya genom att tabort den gamla token 
         os.remove(".cache-"+ config["spotify_config"]["USERNAME"])
     token_1= util.prompt_for_user_token(username=config["spotify_config"]["USERNAME"], scope=config["spotify_config"]["SCOPE"],client_id=config["spotify_config"]["SPOTIPY_CLIENT_ID"], redirect_uri=config["spotify_config"]["SPOTIPY_REDIRECT_URI"], client_secret=config["spotify_config"]["SPOTIPY_CLIENT_SECRET"])
@@ -45,8 +48,9 @@ def Connect_to_token(): #ansluter till spotify token
 
 def creat_list(): # skapar listan där låtar kommer att läggas till 
     for List in range(0,spotifyObject_1.user_playlists(user=config["spotify_config"]["USERNAME"])["total"]): #hämtar alla listor som användaren har 
-        a.append(spotifyObject_1.user_playlists(user=config["spotify_config"]["USERNAME"])["items"][List]["name"])
-    if "my super cool AI playlist" not in a: #om my super cool AI playlist inte är skapad förut
+        playlist.append(spotifyObject_1.user_playlists(user=config["spotify_config"]["USERNAME"])["items"][List]["name"])
+
+    if "my super cool AI playlist" not in playlist: #om my super cool AI playlist inte är skapad förut
         spotifyObject_1.user_playlist_create(user=config["spotify_config"]["USERNAME"], name="my super cool AI playlist", public=False, description="my super cool AI playlist made with my super cool AI program")#skapar spellistan 
         config["spotify_config"]["list_created"] = spotifyObject_1.user_playlists(user=config["spotify_config"]["USERNAME"])["items"][0]["id"]
         new_json_string = json.dumps(config, indent=4, )
@@ -62,36 +66,42 @@ def Add_to_list():#lägger till låtar till spellistan
         config_buffer.write(new_json_string)
         spotifyObject_1.user_playlist_add_tracks(user=config["spotify_config"]["USERNAME"] ,playlist_id=config["spotify_config"]["list_created"],tracks=[spotifyObject_1.currently_playing()["item"]["id"]])#lägger till låten i spellistan 
         print("added")      
+        
     else:
         print("track is already in list")
 
 def Change_song_puse_play(): #byter låtar, pausa och spela 
-    global s 
-    s.append(boxes[0][0]) #lägger till hand positionen i en lista för att kunna jämföra förändringen 
-    if s[0]-s[-1] < -200: #om förändringen mellan den första och sista värdet är mindre än -200 så betyder det att handen har rört sig högeråt 
-        s = []
+    global postion
+    postion.append(boxes[0][0]) #lägger till hand positionen i en lista för att kunna jämföra förändringen 
+    if postion[0]-postion[-1] < -200: #om förändringen mellan den första och sista värdet är mindre än -200 så betyder det att handen har rört sig högeråt 
         spotifyObject_1.next_track() #spela nästa låt 
-        
+        print("next track")
         time.sleep(0.5)
+        postion = []
 
-    elif s[0]-s[-1] > 200: #om förändringen mellan den första och sista värdet är mindre än -200 så betyder det att handen har rört sig vänsteråt  
-        s = []
+    elif postion[0]-postion[-1] > 200: #om förändringen mellan den första och sista värdet är mindre än -200 så betyder det att handen har rört sig vänsteråt  
         spotifyObject_1.previous_track() #spelar föregånde låt 
+        print("previous track")
         time.sleep(0.5)
-    
-    elif len(s) > 40: #om listans längd är större än 40
-        if s[0]-s[1] < 25 and s[0]-s[1] > -25 : #och skillnaden mellan den första och sista värdet är mellan 25 och -25 (det betyder att handen inte rör på sig)
+        postion = []
+
+    elif len(postion) > 40: #om listans längd är större än 40
+        if postion[0]-postion[1] < 25 and postion[0]-postion[1] > -25 : #och skillnaden mellan den första och sista värdet är mellan 25 och -25 (det betyder att handen inte rör på sig)
             if not spotifyObject_1.currently_playing()["is_playing"]: # spela om musiken är pausad
                 spotifyObject_1.start_playback()
+                print("strat playback")
                 time.sleep(0.5)
+
             elif spotifyObject_1.currently_playing()["is_playing"]:# spela om musiken är pausad 
                 spotifyObject_1.pause_playback()
+                print("pause playback")
                 time.sleep(0.5)
-        s = []
+        postion = []
 
 cap = cv2.VideoCapture(0)
 Connect_to_token()
 creat_list()
+
 while True:
     _,frame = cap.read() 
     #startar detektering
@@ -109,11 +119,12 @@ while True:
             Add_to_list()
         except:
             input(" No active device found ... press ENTER when you are back on track")
+
     if 1 in labels: #om en hand hittas
-        
+        try:
             Change_song_puse_play()
-
-
+        except:
+            input(" No active device found ... press ENTER when you are back on track")
 
 cv2.destroyAllWindows()
         
