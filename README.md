@@ -60,8 +60,34 @@ Den här funktinen körs när programmet detekterar en vinkande hand. Sedan bero
 
 ### config.json:
 I config.json så har jag olika variabler som jag vill spara långsiktig, alltså i hårdisken och inte i ram minnet, som till exempel en bool variabel som och det är för att göra programmet mer effektiv. Jag har även olika konfigurationer för min model.   
-  
+
+### Få en bättre förstålse:
+För att få en bättre förstålse för koden, så kan du kika på evaluate.py, där finns all kod kommenterad.  
+
 ## Hur test kör man programmet: 
-Först så behöver spotify appen nedladd på dator. Sedan så ska du gå igenom " "Vilka Bibliotek behöver man ladda ner" sedan ladda ner image_det folder och öppna hela foldern i Visual studio eller ett liknande code editor, och sedan kör du evaluate koden. När du kör programmet så kommer du behöva fylla i ditt spotify användarnamn, detta steget kommer du behöva göra det bara första gången du kör programmet. Efter det så kommer en spotify sida att komma upp, då trycker du på agree ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(28)_LI.jpg) sedna kommer en goole sida att dyka upp då kopierar du l länken till den sidan och klistra in det i terminalen. Och då är du redo att testa. 
+Först så behöver spotify appen nedladd på dator. Sedan så ska du gå igenom " "Vilka Bibliotek behöver man ladda ner" sedan ladda ner image_det folder och öppna hela foldern i Visual studio eller ett liknande code editor, och sedan kör du evaluate koden. När du kör programmet så kommer du behöva fylla i ditt spotify användarnamn, detta steget kommer du behöva göra det bara första gången du kör programmet. Efter det så kommer en spotify sida att komma upp, då trycker du på agree ![](https://github.com/AmjadAlakrami/AI-projekt-/blob/master/Video%26Images/Screenshot%20(28)_LI.jpg) sedna kommer en google sida att dyka upp då kopierar du l länken till den sidan och klistra in det i terminalen. Och då är du redo att testa. 
+
+### Vilka funktioner finns i programmet och hur man använder de:
+Pausa/spela: Den funktionen använder du genom att hålla handen på samma plats framför kammran i ca 2sekunder.
+Spela nästa låt: Den funktionen använder du genom att slida handen till höger framför kammran.
+Spela förra låt: Den funktionen använder du genom att slida handen till vänster framför kammran.
+Lägg till låten till en spel lista: Den funktionen använder du genom att hålla en tumme upp framför kammran. 
+
+## Utvädering:
+### Vilka svårigheter har uppståt under projektet:
+* Datasetet: En av de största utmaningar i det här projektet var att fixa en fungerande dataset, och det var på grund av att jag inte kunde hitta bilder som jag vill att min model ska träna på. Och jag skulle säga att det är det som tog mest tid av det här projektet.
+* Spotify API: Att använda spotify APi var också ganska utmanande och det var på grund av att jag inte kunde hitta några dokumentationer just för Python. Så jag fick gå igenom källkoden och letade efter de funktionerna jag vill använda, och sedan läsa vilka argument som behövs osv. 
+
+### Vilka problem som finns i programmet: 
+Ett problem som programmet har är att man måste ha Spotify premium för att kunna använda (spela nästa/förra låt) funktionen. 
+Ett till problem är att om programmet inte kännerigen handen under rörlsen så uppstår fel i postionering funktion och därmed kommer programmet att utföra gör funktion, som till exempel spela nästa låt istället för förra låt. 
+
+### Om jag fick gör om projektet: 
+Om jag fick gör om projektet så hade jag först och främst haft flera bilder i datasetet, och även ha bilder som är lite olika vinklade, och det är för att få ännu bättre model.   
+Jag hade också gjort programmet grafisk (i Tkinter).   
+Jag hade även jobbat lite mer med error handling.  
+Jag skulle även vilja hitta på ett bättre sätt att refresha token. 
+
+
 
 
