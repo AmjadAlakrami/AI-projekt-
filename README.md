@@ -24,12 +24,12 @@ numpy: pip install numpy
 
 ### Hur använder man Spotipy
 Först så behöver man importera Biblioteket  
-```ruby  
+```python  
 import spotipy  
 import spotipy.util as util  (Det här gör man för enkelhetens skull och man kan strunta i det om man vill)  
 ```  
 Sedan måste man skapa ett token och ansluta till den.  
-```ruby   
+```python   
 token_1= util.prompt_for_user_token(username=, ,client_id=, redirect_uri=, client_secret=)
 spotifyObject_1 = spotipy.Spotify(auth=token_1)
 ``` 
