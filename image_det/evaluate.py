@@ -71,9 +71,8 @@ cap = cv2.VideoCapture(0)
 Create_token()
 Connect_to_token()
 creat_list()
-ret, frame = cap.read()
 while True:
-
+    _,frame = cap.read()
     boxes, probs = yolo.predict(frame, config["model"]["DEFAULT_THRESHOLD"])
 
     labels = np.argmax(probs, axis=1) if len(probs) > 0 else [] 
