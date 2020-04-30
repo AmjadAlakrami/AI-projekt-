@@ -22,10 +22,10 @@
         "class_scale": 1.0,
         "object_scale": 5.0,
         "no_object_scale": 1.0,
-        "DEFAULT_THRESHOLD": 0.65
+        "DEFAULT_THRESHOLD": 0.7
     },
     "spotify_config": {
-        "Done": true,
+        "Done" : true,
         "list_created": "5wZl2QUoAEym5xDYrg5OUY",
         "track_in_list": [
             "1ett0ayp7e0sad3oWQtJPQ",
@@ -34,21 +34,7 @@
             "3YHHiktpaEShl6v22bOpzo",
             "6S5dMjMifQYmyTu1mX4f8P",
             "79s5XnCN4TJKTVMSmOx8Ep",
-            "2SL6oP2YAEQbqsrkOzRGO4",
-            "7DcvwMAiqKJQD1rrdfxSDx",
-            "5u6vkDnOyaf8LsteDAj2ub",
-            "2jTujnt0y344ai1rNOywgr",
-            "7DKS0rX27cCEPsK0R6tFWS",
-            "7iatul8O8RVR8rDGEgbpIp",
-            "2Ch7LmS7r2Gy2kc64wv3Bz",
-            "0oufSLnKQDoBFX5mgkDCgR",
-            "6lJ5aSxKHCwNBoWkZT3JeJ",
-            "4SWWe2OYC4mqf40Gc2RSdl",
-            "4g32MdRoqwGKQd3NXIRhpU",
-            "1cTZMwcBJT0Ka3UJPXOeeN",
-            "3kfxarilcBr81mb2hmZLeh",
-            "2cYqizR4lgvp4Qu6IQ3qGN",
-            "7uJH0YdSZL6psjxI6Xy08b"
+            "2SL6oP2YAEQbqsrkOzRGO4"
         ],
         "SPOTIPY_CLIENT_ID": "830e5bf515504d4293f128fe0fa77191",
         "SPOTIPY_CLIENT_SECRET": "abd8c43c229342dbbfff672a04f6d132",
